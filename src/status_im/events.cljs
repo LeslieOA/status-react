@@ -1067,21 +1067,6 @@
    (hardwallet/on-get-keys-success cofx data)))
 
 (handlers/register-handler-fx
- :hardwallet/auto-login
- (fn [cofx _]
-   (hardwallet/login-with-keycard cofx true)))
-
-(handlers/register-handler-fx
- :hardwallet/login-with-keycard
- (fn [cofx _]
-   (hardwallet/login-with-keycard cofx false)))
-
-(handlers/register-handler-fx
- :hardwallet/check-card-state
- (fn [cofx _]
-   (hardwallet/check-card-state cofx)))
-
-(handlers/register-handler-fx
  :hardwallet.callback/on-get-keys-error
  (fn [cofx [_ error]]
    (hardwallet/on-get-keys-error cofx error)))
@@ -1090,11 +1075,6 @@
  :hardwallet.callback/on-sign-error
  (fn [cofx [_ error]]
    (hardwallet/on-sign-error cofx error)))
-
-(handlers/register-handler-fx
- :hardwallet.ui/status-hardwallet-option-pressed
- (fn [cofx _]
-   (hardwallet/status-hardwallet-option-pressed cofx)))
 
 (handlers/register-handler-fx
  :hardwallet.ui/password-option-pressed
