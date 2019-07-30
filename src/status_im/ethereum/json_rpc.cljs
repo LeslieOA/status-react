@@ -32,6 +32,8 @@
    "shhext_loadFilters" {}
    "shhext_loadFilter" {}
    "shhext_removeFilters" {}
+   "shhext_chats" {}
+   "shhext_saveChat" {}
    "status_joinPublicChat" {}
    "status_chats" {}
    "status_startOneOnOneChat" {}
